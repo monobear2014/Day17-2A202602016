@@ -1,0 +1,14 @@
+$ docker compose run --rm app python -m src.evaluate --impl student --reuse-seeded
+
+E06 semantic: Quy tac retry POST payment la gi?
+  PASS  467.3 ms
+E11 semantic: Theo incident playbook, truoc khi tang timeout can kiem tra gi?
+  PASS  239.8 ms
+
+Benchmark summary
+| Case | Layer    | Pass | Latency ms |
+|------|----------|------|-----------:|
+| E06  | semantic | yes  |      467.3 |
+| E11  | semantic | yes  |      239.8 |
+
+Reports: /workspace/reports/benchmark.json | /workspace/reports/benchmark.md

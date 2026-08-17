@@ -1,0 +1,14 @@
+$ docker compose run --rm app python -m src.forget --user-id minh-lab17
+Deleting user-scoped memory for 'minh-lab17'...
+Redis keys deleted: 0
+Zep user absent: True
+Redis user keys remaining: 0
+Shared semantic KB remains intact because it stores domain knowledge, not user PII.
+
+$ docker compose run --rm app python -m src.forget --user-id minh-lab17 --verify-only
+Zep user absent: True
+Redis user keys remaining: 0
+Shared semantic KB remains intact because it stores domain knowledge, not user PII.
+
+(Note: re-seeded with `python -m src.seed` immediately after this drill, per
+LAB.md 4.7, to restore minh-lab17 before running the full benchmark/golden set.)
